@@ -1,0 +1,60 @@
+body {
+  background-image: url("https://wallpapercrafter.com/sizes/1366x768/164590-original-characters-anime-girls-short-hair-black-hair-school-uniform-closed-eyes-sleeping-lantern-anime-window-rain-night.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.status-line {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 100%;
+  background-color: #101019;
+  color: white;
+  padding: 0.5px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.status-item {
+  margin-left: 10px;
+  color: #a6e3a1;
+}
+
+.git-branch {
+  font-weight: bold;
+  color: #cba6f7;
+}
+
+.icon {
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  margin-right: 0;
+  margin-left: 10px;
+}
