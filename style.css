@@ -32,24 +32,52 @@ body {
   position: absolute;
   bottom: 20px;
   right: 0;
+  left: 0;
   width: 100%;
   background-color: #101019;
   color: white;
   padding: 0.5px;
-  text-align: right;
+  text-align: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;  
   font-weight: bold;
+}
+
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+}
+
+.left-section {
+  align-items: flex-start;
+}
+
+.center-section {
+  align-items: center;
+}
+
+.right-section {
+  align-items: flex-end;
+}
+
+.center-section .status-item {
+  color: white;
 }
 
 .status-item {
   margin-left: 10px;
   color: #a6e3a1;
+  margin-right: 15px;
 }
 
 .git-branch {
   font-weight: bold;
   color: #cba6f7;
+}
+
+.file-name {
+  color: #f5c2e7;
 }
 
 .icon {
