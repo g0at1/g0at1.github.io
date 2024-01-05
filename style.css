@@ -5,8 +5,8 @@ body {
   height: 100vh;
   margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;   
+  justify-content: flex-start; 
   position: relative;
 }
 
@@ -86,3 +86,14 @@ body {
   margin-right: 0;
   margin-left: 10px;
 }
+
+.java-code {
+  font-family: "JetBrains Mono", monospace;
+  color: #f8f8f8;
+  margin: 0;
+  padding: 5px 0;
+  text-indent: 20px;
+  max-height: 810px; 
+  overflow-y: scroll; 
+}
+
