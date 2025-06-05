@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.skills__list i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.project-card__tech i {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
 .header__logo-name {
   display: flex;
   align-items: center;
