@@ -1,87 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Portfolio</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <title>g0at1</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-  <div>
-    <pre class="java-code">
-      <code>
- 1         class MyPortfolio {
- 2           public static void main(String[] args) {
- 3               // Hello, I'm [Michal] - A passionate developer!
- 4               System.out.println("Welcome to My Portfolio");
- 5               
- 6           }
- 7
- 8           public static void workExperience() {
- 9               String experience = """
- 10               MAK IT | Internship 
- 11               08.2023 - Present
- 12                 
- 13               Responsibilities:
- 14                 - Writing test automation in python
- 15                 - Helping the support team
- 16
- 17
- 18               ATN Piotr Kiziński | Internship
- 19               09.2020 - 10.2020
- 20
- 21               Key responsibilities:
- 22                 - Learning to use Windows Server
- 23                 - Maintaining company equipment
- 24                 - Fixing minor hardware faults
- 25
- 26                 
- 27               Elmark | Internship
- 28               08.2020 - 09.2020
- 29                 
- 30               Key responsibilities:
- 31                 - Maintaining company website
- 32                 - Adding products to the online store
- 33              """
- 34          }
- 35
- 36          public static void educationBackground() {
- 37              String educationBackground = """
- 38               Polish-Japanese Academy of Information Technology
- 39               Bachelor in Computer Science 
- 40               2022 - Present
- 41
- 42               Collegium da Vinci 
- 43               Bachelor in Computer Science
- 44               2021 - 2022
- 45              """
- 46          }
- 47        }
-      </code>
-    </pre>
-  </div>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__logo-name">
+        <img src="images/user_image.jpeg" alt="Profile picture" class="header__profile-pic" />
+        <div class="header__text">
+          <h1 class="header__name">Michal Lendzion</h1>
+          <p class="header__title">Fullstack Developer</p>
+        </div>
+      </div>
 
-  <div class="overlay">
-    <div class="content"></div>
-  </div>
+      <nav class="header__contacts">
+        <a href="https://github.com/g0at1" target="_blank">
+          <i class="fa fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/lendzion-michal/" target="_blank">
+          <i class="fa fa-linkedin"></i> LinkedIn
+        </a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="status-line">
-    <div class="left-section">
-      <span class="status-item">NORMAL</span>
-      <span class="status-item file-name">MyPortfolio.java</span>
-      <span class="status-item">Ln 1, Col 1</span>
+  <main class="main">
+    <div class="container">
+
+      <!-- <section id="about" class="section"> -->
+      <!--   <h2 class="section__title">O mnie</h2> -->
+      <!--   <p class="section__text"> -->
+      <!--   </p> -->
+      <!-- </section> -->
+
+      <section id="experience" class="section">
+        <h2 class="section__title">Experience</h2>
+
+        <div class="card">
+          <div class="card__header" onclick="toggleDetails(this)">
+            <div>
+              <h3 class="card__job-title">Junior Fullstack Developer</h3>
+              <p class="card__company">MAK IT – Warsaw</p>
+            </div>
+            <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
+          </div>
+          <div class="card__details">
+            <p class="card__period">01.2024 – present</p>
+            <ul class="card__list">
+              <li>Development of new functions for company’s product in the area of Fintech and Insuretech (frontend and
+                backend).</li>
+              <li>Redesign of existing functions.</li>
+              <li>Providing support.</li>
+              <li>Keeping code clean and working with team members to consider and implement best practices.</li>
+              <li>Participation in daily team meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header" onclick="toggleDetails(this)">
+            <div>
+              <h3 class="card__job-title">Test Automation Engineer</h3>
+              <p class="card__company">MAK IT – Warsaw</p>
+            </div>
+            <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
+          </div>
+          <div class="card__details">
+            <p class="card__period">08.2023 – 01.2024</p>
+            <ul class="card__list">
+              <li>Implementing automated test cases using Python and Selenium Framework.</li>
+              <li>Providing a help for the support team.</li>
+              <li>Monitoring, debugging and documenting test results.</li>
+              <li>Eliminating manual testing and trivial activities.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li>.NET</li>
+          <li>TypeScript</li>
+          <li>Angular</li>
+          <li>Python</li>
+          <li>Git</li>
+          <li>C#</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project-card">
+            <div class="project-card__header">
+              <strong>g0at1 / auto-translate</strong>
+            </div>
+            <p class="project-card__desc">Auto-Translate Manager is a lightweight desktop application written in Python
+              that helps you manage i18n JSON translation files.</p>
+            <div class="project-card__footer">
+              <span class="project-card__tech">Python</span>
+              <a href="https://github.com/g0at1/auto-translate" target="_blank" class="project-card__link">GitHub
+                Repo</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__header">
+              <strong>g0at1 / goat-lang</strong>
+            </div>
+            <p class="project-card__desc">This is my test to learn about assembly and how to write a compiler for my
+              goat programming language.</p>
+            <div class="project-card__footer">
+              <span class="project-card__tech">Rust</span>
+              <a href="https://github.com/g0at1/goat-lang" target="_blank" class="project-card__link">GitHub Repo</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__header">
+              <strong>g0at1 / youtube-video-getter</strong>
+            </div>
+            <p class="project-card__desc">Youtube Video Checker gets you videos from specified youtube channels from
+              week of so you can be in touch with your favourite channel's latest uploads.</p>
+            <div class="project-card__footer">
+              <span class="project-card__tech">Go, Html</span>
+              <a href="https://github.com/g0at1/youtube-video-checker" target="_blank" class="project-card__link">GitHub
+                Repo</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__header">
+              <strong>scribe-org / Scribe-Android</strong>
+            </div>
+            <p class="project-card__desc">Android app with keyboards for language learners.</p>
+            <div class="project-card__footer">
+              <span class="project-card__tech">Kotlin</span>
+              <a href="https://github.com/scribe-org/Scribe-Android" target="_blank" class="project-card__link">GitHub
+                Repo</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__header">
+              <strong>nusmodifications / nusmods</strong>
+            </div>
+            <p class="project-card__desc">Official course planning platform for National University of Singapore.</p>
+            <div class="project-card__footer">
+              <span class="project-card__tech">TypeScript</span>
+              <a href="https://github.com/nusmodifications/nusmods" target="_blank" class="project-card__link">GitHub
+                Repo</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card__header">
+              <strong>g0at1 / pypath</strong>
+            </div>
+            <p class="project-card__desc">Simple terminal-based file manager written in Python using the curses library.
+            </p>
+            <div class="project-card__footer">
+              <span class="project-card__tech">Python</span>
+              <a href="https://github.com/g0at1/pypath" target="_blank" class="project-card__link">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2 class="section__title">Education</h2>
+        <div class="card">
+          <div class="card__header" onclick="toggleDetails(this)">
+            <div>
+              <h3 class="card__job-title">Polish-Japanese Academy of Information Technology</h3>
+              <p class="card__company">Computer Science</p>
+            </div>
+            <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
+          </div>
+          <div class="card__details">
+            <p class="card__period">2022 – present</p>
+            <p class="card__text">Bachelor in Computer Science</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="footer" class="footer">
+        <p>
+          <i class="fa fa-copyright"></i> 2025 Michal Lendzion. All rights reserved.
+        </p>
+      </section>
     </div>
-    <div class="center-section">
-      <span class="status-item">&#9881;LSP: jdtls, null-ls</span>
-    </div>
-    <div class="right-section">
-      <span class="status-item">UTF-8</span>
-      <span class="status-item">Unix</span>
-      <span class="status-item git-branch">main</span>
-    </div>
-  </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
