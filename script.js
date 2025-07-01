@@ -93,4 +93,43 @@ function appendDurationsToPeriods() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', appendDurationsToPeriods);
+async function loadProjects() {
+  try {
+    const res = await fetch('./public/projects.json');
+    const projects = await res.json();
+
+    const container = document.getElementById('projects-container');
+
+    projects.forEach(p => {
+      const card = document.createElement('div');
+      card.classList.add('project-card');
+
+      card.innerHTML = `
+        <div class="project-card__header">
+          <strong>${p.title}</strong>
+        </div>
+        <p class="project-card__desc">
+          ${p.description}
+        </p>
+        <div class="project-card__footer">
+          <span class="project-card__tech">
+            <i class="${p.techIconClass}"></i>
+          </span>
+          <a href="${p.repoUrl}" target="_blank" class="project-card__link">
+            GitHub Repo
+          </a>
+        </div>
+      `.trim();
+
+      container.appendChild(card);
+    });
+
+  } catch (err) {
+    console.error('Error loading projects:', err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  appendDurationsToPeriods();
+  loadProjects();
+});
