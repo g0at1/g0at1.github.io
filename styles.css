@@ -286,3 +286,31 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.project-card.hidden {
+  display: none !important;
+}
+
+.projects__toggle-btn {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  background-color: #a8dadc;
+  border: 2px solid #457b9d;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.projects__toggle-btn:hover {
+  background-color: #457b9d;
+  color: #f1faee;
+  transform: translateY(-2px);
+}
+
+.projects__toggle-btn:active {
+  transform: translateY(0);
+}

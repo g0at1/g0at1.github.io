@@ -95,14 +95,19 @@ function appendDurationsToPeriods() {
 
 async function loadProjects() {
   try {
-    const res = await fetch('./public/projects.json');
-    const projects = await res.json();
-
+    const res       = await fetch('./public/projects.json');
+    const projects  = await res.json();
     const container = document.getElementById('projects-container');
+    const toggleBtn = document.getElementById('toggle-projects');
 
-    projects.forEach(p => {
+    projects.forEach((p, i) => {
       const card = document.createElement('div');
-      card.classList.add('project-card');
+      card.className = 'project-card';
+
+      if (i >= 6) {
+        card.classList.add('hidden');
+        card.style.display = 'none';
+      }
 
       card.innerHTML = `
         <div class="project-card__header">
@@ -122,6 +127,25 @@ async function loadProjects() {
       `.trim();
 
       container.appendChild(card);
+    });
+
+    let expanded = false;
+    toggleBtn.addEventListener('click', () => {
+      expanded = !expanded;
+
+      document.querySelectorAll('.project-card').forEach((card, i) => {
+        if (i >= 6) {
+          if (expanded) {
+            card.classList.remove('hidden');
+            card.style.removeProperty('display');
+          } else {
+            card.classList.add('hidden');
+            card.style.display = 'none';
+          }
+        }
+      });
+
+      toggleBtn.textContent = expanded ? 'Show less' : 'Show more';
     });
 
   } catch (err) {

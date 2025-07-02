@@ -34,5 +34,29 @@
     "description": "Simple terminal-based file manager written in Python using the curses library.",
     "techIconClass": "devicon-python-plain colored",
     "repoUrl": "https://github.com/g0at1/pypath"
+  },
+  {
+    "title": "g0at1 / speedometer",
+    "description": "Speedometer is an macOS app that shows you your current machine's metrics like CPU and GPU usage, network speed, system uptime etc.",
+    "techIconClass": "devicon-swift-plain colored",
+    "repoUrl": "https://github.com/g0at1/speedometer"
+  },
+  {
+    "title": "g0at1 / pypath.nvim",
+    "description": "Lua plugin to use pypath inside neovim.",
+    "techIconClass": "devicon-lua-plain colored",
+    "repoUrl": "https://github.com/g0at1/pypath.nvim"
+  },
+  {
+    "title": "g0at1 / g0at1.github.io",
+    "description": "Source code for my personal website.",
+    "techIconClass": "devicon-html5-plain colored",
+    "repoUrl": "https://github.com/g0at1/g0at1.github.io"
+  },
+  {
+    "title": "g0at1 / sudoku-solver",
+    "description": "Small app that helps you solve your sudoku",
+    "techIconClass": "devicon-ocaml-plain colored",
+    "repoUrl": "https://github.com/g0at1/sudoku-solver"
   }
 ]
