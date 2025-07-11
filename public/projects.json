@@ -58,5 +58,11 @@
     "description": "Small app that helps you solve your sudoku",
     "techIconClass": "devicon-ocaml-plain colored",
     "repoUrl": "https://github.com/g0at1/sudoku-solver"
+  },
+  {
+    "title": "g0at1 / git-tui",
+    "description": "TUI for managing git repo",
+    "techIconClass": "devicon-c-plain colored",
+    "repoUrl": "https://github.com/g0at1/git-tui"
   }
 ]
