@@ -11,12 +11,6 @@
   font-size: 0.9rem;
 }
 
-.skills__list i {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
 .project-card__tech i {
   font-size: 1.5rem;
   vertical-align: middle;
@@ -200,21 +194,6 @@ a:hover {
   margin-top: 8px;
 }
 
-.skills__list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skills__list li {
-  background-color: #263238;
-  border-radius: 4px;
-  padding: 8px 12px;
-  margin: 5px;
-  font-size: 0.9rem;
-  color: #eceff1;
-}
-
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -313,4 +292,37 @@ a:hover {
 
 .projects__toggle-btn:active {
   transform: translateY(0);
+}
+
+#skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.skill-card {
+  display: inline-flex;
+  align-items: center;
+  background-color: #263238;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transition: transform 0.1s ease;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+}
+
+.skill-card__icon {
+  font-size: 1.4rem;
+  margin-right: 8px;
+  color: #81c784;
+}
+
+.skill-card__name {
+  font-size: 0.95rem;
+  color: #eceff1;
 }

@@ -120,8 +120,12 @@ async function loadProjects() {
           <span class="project-card__tech">
             <i class="${p.techIconClass}"></i>
           </span>
-          <a href="${p.repoUrl}" target="_blank" class="project-card__link">
-            GitHub Repo
+          <a href="${p.repoUrl}" 
+            title="GitHub Repo"
+            target="_blank"
+            class="project-card__link"
+            aria-label="GitHub Repo">
+           <i class="fa fa-github fa-2x"></i>
           </a>
         </div>
       `.trim();
@@ -153,7 +157,29 @@ async function loadProjects() {
   }
 }
 
+async function loadSkills() {
+  try {
+    const res       = await fetch('./public/skills_list.json');
+    const skills    = await res.json();
+    const container = document.getElementById('skills-container');
+
+    skills.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'skill-card';
+      card.innerHTML = `
+        <i class="${s.iconClass} skill-card__icon"></i>
+        <span class="skill-card__name">${s.name}</span>
+      `.trim();
+      container.appendChild(card);
+    });
+
+  } catch (err) {
+    console.error('Error loading skills:', err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   appendDurationsToPeriods();
   loadProjects();
+  loadSkills();
 });

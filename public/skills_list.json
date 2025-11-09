@@ -1,0 +1,26 @@
+[
+  {
+    "name": ".NET",
+    "iconClass": "devicon-dotnetcore-plain colored"
+  },
+  {
+    "name": "TypeScript",
+    "iconClass": "devicon-typescript-plain colored"
+  },
+  {
+    "name": "Angular",
+    "iconClass": "devicon-angular-plain colored"
+  },
+  {
+    "name": "Python",
+    "iconClass": "devicon-python-plain colored"
+  },
+  {
+    "name": "Git",
+    "iconClass": "devicon-git-plain colored"
+  },
+  {
+    "name": "C#",
+    "iconClass": "devicon-csharp-plain colored"
+  }
+]
