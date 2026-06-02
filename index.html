@@ -1,156 +1,139 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>g0at1</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="public/font-awesome/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="container header__inner">
-        <div class="header__logo-name">
-          <img
-            src="images/user_image.jpeg"
-            alt="Profile picture"
-            class="header__profile-pic"
-          />
-          <div class="header__text">
-            <h1 class="header__name">Michal Lendzion</h1>
-            <p class="header__title">Fullstack Developer</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>g0at1</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__logo-name">
+        <img src="images/user_image.jpeg" alt="Profile picture" class="header__profile-pic" />
+        <div class="header__text">
+          <h1 class="header__name">Michal Lendzion</h1>
+          <p class="header__title">Fullstack Developer</p>
+        </div>
+      </div>
+
+      <nav class="header__contacts">
+        <a href="https://github.com/g0at1" target="_blank" aria-label="GitHub">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lendzion-michal/" target="_blank" aria-label="LinkedIn">
+          <i class="fa fa-linkedin"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <!-- <section id="about" class="section"> -->
+      <!--   <h2 class="section__title">O mnie</h2> -->
+      <!--   <p class="section__text"> -->
+      <!--   </p> -->
+      <!-- </section> -->
+
+      <section id="experience" class="section">
+        <h2 class="section__title">Experience</h2>
+
+        <div class="card">
+          <div class="card__header" onclick="toggleDetails(this)">
+            <div>
+              <h3 class="card__job-title">Junior Fullstack Developer</h3>
+              <p class="card__company">MAK IT – Warsaw</p>
+            </div>
+            <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
+          </div>
+          <div class="card__details">
+            <p class="card__period">01.2024 – present</p>
+            <ul class="card__list">
+              <li>
+                Development of new functions for company’s product in the area
+                of Fintech and Insuretech (frontend and backend).
+              </li>
+              <li>Redesign of existing functions.</li>
+              <li>Providing support.</li>
+              <li>
+                Keeping code clean and working with team members to consider
+                and implement best practices.
+              </li>
+              <li>Participation in daily team meetings.</li>
+            </ul>
           </div>
         </div>
 
-        <nav class="header__contacts">
-          <a
-            href="https://github.com/g0at1"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <i class="fa fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/lendzion-michal/"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fa fa-linkedin"></i>
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="main">
-      <div class="container">
-        <!-- <section id="about" class="section"> -->
-        <!--   <h2 class="section__title">O mnie</h2> -->
-        <!--   <p class="section__text"> -->
-        <!--   </p> -->
-        <!-- </section> -->
-
-        <section id="experience" class="section">
-          <h2 class="section__title">Experience</h2>
-
-          <div class="card">
-            <div class="card__header" onclick="toggleDetails(this)">
-              <div>
-                <h3 class="card__job-title">Junior Fullstack Developer</h3>
-                <p class="card__company">MAK IT – Warsaw</p>
-              </div>
-              <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
+        <div class="card">
+          <div class="card__header" onclick="toggleDetails(this)">
+            <div>
+              <h3 class="card__job-title">Test Automation Engineer</h3>
+              <p class="card__company">MAK IT – Warsaw</p>
             </div>
-            <div class="card__details">
-              <p class="card__period">01.2024 – present</p>
-              <ul class="card__list">
-                <li>
-                  Development of new functions for company’s product in the area
-                  of Fintech and Insuretech (frontend and backend).
-                </li>
-                <li>Redesign of existing functions.</li>
-                <li>Providing support.</li>
-                <li>
-                  Keeping code clean and working with team members to consider
-                  and implement best practices.
-                </li>
-                <li>Participation in daily team meetings.</li>
-              </ul>
-            </div>
+            <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
           </div>
-
-          <div class="card">
-            <div class="card__header" onclick="toggleDetails(this)">
-              <div>
-                <h3 class="card__job-title">Test Automation Engineer</h3>
-                <p class="card__company">MAK IT – Warsaw</p>
-              </div>
-              <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
-            </div>
-            <div class="card__details">
-              <p class="card__period">08.2023 – 01.2024</p>
-              <ul class="card__list">
-                <li>
-                  Implementing automated test cases using Python and Selenium
-                  Framework.
-                </li>
-                <li>Providing a help for the support team.</li>
-                <li>Monitoring, debugging and documenting test results.</li>
-                <li>Eliminating manual testing and trivial activities.</li>
-              </ul>
-            </div>
+          <div class="card__details">
+            <p class="card__period">08.2023 – 01.2024</p>
+            <ul class="card__list">
+              <li>
+                Implementing automated test cases using Python and Selenium
+                Framework.
+              </li>
+              <li>Providing a help for the support team.</li>
+              <li>Monitoring, debugging and documenting test results.</li>
+              <li>Eliminating manual testing and trivial activities.</li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="skills" class="section">
-          <h2 class="section__title">Skills</h2>
-          <div id="skills-container"></div>
-        </section>
+      <section id="skills" class="section">
+        <h2 class="section__title">Skills</h2>
+        <div id="skills-container"></div>
+      </section>
 
-        <section id="projects" class="section">
-          <h2 class="section__title">Projects</h2>
-          <div id="projects-container" class="projects__grid"></div>
-          <button id="toggle-projects" class="projects__toggle-btn">
-            Show more
-          </button>
-        </section>
+      <section id="projects" class="section">
+        <h2 class="section__title">Projects</h2>
+        <div id="projects-container" class="projects__grid"></div>
+        <button id="toggle-projects" class="projects__toggle-btn">
+          Show more
+        </button>
+      </section>
 
-        <section id="education" class="section">
-          <h2 class="section__title">Education</h2>
-          <div class="card">
-            <div class="card__header" onclick="toggleDetails(this)">
-              <div>
-                <h3 class="card__job-title">
-                  Polish-Japanese Academy of Information Technology
-                </h3>
-                <p class="card__company">Computer Science</p>
-              </div>
-              <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
+      <section id="education" class="section">
+        <h2 class="section__title">Education</h2>
+        <div class="card">
+          <div class="card__header" onclick="toggleDetails(this)">
+            <div>
+              <h3 class="card__job-title">
+                Polish-Japanese Academy of Information Technology
+              </h3>
+              <p class="card__company">Computer Science</p>
             </div>
-            <div class="card__details">
-              <p class="card__period">10.2022 – present</p>
-              <p class="card__text">Bachelor in Computer Science</p>
-            </div>
+            <span class="card__toggle"><i class="fa fa-caret-down"></i></span>
           </div>
-        </section>
+          <div class="card__details">
+            <p class="card__period">10.2022 – present</p>
+            <p class="card__text">Bachelor in Computer Science</p>
+          </div>
+        </div>
+      </section>
 
-        <section id="footer" class="footer">
-          <p>
-            <i class="fa fa-copyright"></i> 2025 Michal Lendzion. All rights
-            reserved.
-          </p>
-        </section>
-      </div>
-    </main>
+      <section id="footer" class="footer">
+        <p>
+          <i class="fa fa-copyright"></i>
+          <span id="current-year"></span> Michal Lendzion. All rights reserved.
+        </p>
+      </section>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

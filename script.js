@@ -95,8 +95,8 @@ function appendDurationsToPeriods() {
 
 async function loadProjects() {
   try {
-    const res       = await fetch('./public/projects.json');
-    const projects  = await res.json();
+    const res = await fetch('./public/projects.json');
+    const projects = await res.json();
     const container = document.getElementById('projects-container');
     const toggleBtn = document.getElementById('toggle-projects');
 
@@ -159,8 +159,8 @@ async function loadProjects() {
 
 async function loadSkills() {
   try {
-    const res       = await fetch('./public/skills_list.json');
-    const skills    = await res.json();
+    const res = await fetch('./public/skills_list.json');
+    const skills = await res.json();
     const container = document.getElementById('skills-container');
 
     skills.forEach(s => {
@@ -182,4 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
   appendDurationsToPeriods();
   loadProjects();
   loadSkills();
+  document.getElementById('current-year').textContent =
+    new Date().getFullYear();
 });
